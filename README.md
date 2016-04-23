@@ -14,18 +14,21 @@ Please note this is an early alpha, and as such has several (known) bugs.
 Place `id3.js` into your project's directory, then require it: `var id3 = require('path/to/id3.js');`
 
 ## Usage
-```var id3 = require("./id3.js");
+```
+var id3 = require("./id3.js");
 
 var file = "path\\to\\file";
 
 id3.tags(file,function(data){
 	console.log(data);
-});```
+});
+```
 
 `data` is an object with every tag it could find.
 
 Example:
-```{
+```
+{
 	TALB: 'Into The Sun',
 	TCON: 'Dubstep',
 	TIT2: 'Into The Sun',
@@ -35,7 +38,8 @@ Example:
 	TSSE: 'Lavf55.19.100',
 	TYER: '2015',
 	USLT: 'eng'
-}```
+}
+```
 
 Title (TIT2), Artist (TPE2), and Album (TALB) will always be present, but will be set to `null` if no data could be found.
 
